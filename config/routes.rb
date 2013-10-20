@@ -8,7 +8,7 @@ Pinapp::Application.routes.draw do
 
 
   #root the app to pages/home
-  root :to => 'pages#home'
+  root :to => 'pins#index'
 
   # See how all your routes lay out with "rake routes"
 

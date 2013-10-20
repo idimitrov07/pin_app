@@ -1,0 +1,21 @@
+<% unless user_signed_in? %>
+
+	<div class="hero-unit">
+
+		<h1>Pin yourself</h1>
+		<p>
+			You are at the home page of Pin App. 
+			A studying project using Ruby on Rails.
+			The following tutorial has been used in creating the app <%= link_to "One Month Rails", "https://onemonthrails.com", target: "_blank" %>. <br>
+			Also, you can find very good resources at 
+			<%= link_to "Rails Tutorials", "http://rubyonrails.org/screencasts", target: "_blank" %>,
+			<%= link_to "Code School", "http://codeschool.com", target: "_blank" %>,
+			<%= link_to "Treehouse", "http://teamtreehouse.com", target: "_blank" %>.
+		</p>
+		<p>
+			<%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
+		</p>
+
+	</div>
+
+<% end %>
