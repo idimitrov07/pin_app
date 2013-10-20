@@ -8,6 +8,8 @@ gem 'rails_12factor', group: :production
 
 gem 'devise'
 gem 'simple_form'
+gem "paperclip", "~> 3.0"
+
 
 
 
