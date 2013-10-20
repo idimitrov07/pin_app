@@ -6,6 +6,12 @@ Devise.setup do |config|
   # note that it will be overwritten if you use your own mailer class with default "from" parameter.
   config.mailer_sender = "please-change-me-at-config-initializers-devise@example.com"
 
+  #required for deploying to heroku
+  if Rails.env.production?
+    config.secret_key = '81e9a98879b67195c77c0edea5f5add80dfb75a6f979c1789d546014894e011abf88b9be4ee4d09dda1272726c2b5d19cca23ec5d6055e6db3965ba20293a516'
+  end
+
+
   # Configure the class responsible to send e-mails.
   # config.mailer = "Devise::Mailer"
 
