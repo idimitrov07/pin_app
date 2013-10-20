@@ -66,4 +66,14 @@ Pinapp::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
   #In production, :host should be set to the actual host of your application.
   #config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  #paperclip should use Amazon S3 storage on heroku
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => "pinappomrails",
+      :access_key_id => "AKIAJKYPJW24MP7S4MWQ",
+      :secret_access_key => "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"
+    }
+  }
 end
